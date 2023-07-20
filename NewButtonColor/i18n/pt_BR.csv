@@ -1,0 +1,6 @@
+"Change button colors","Mude as cores dos botoes"
+"This command allows you to change the button colors in Magento 2.","Como este comando voce ira mudar as cores dos botoes"
+"Primary button color (#FFFFFF)","Cor primaria (#FFFFFF)"
+"Secondary button color (#FFFFFF)","Cor secundaria (#FFFFFF)"
+"Invalid color format. Please use hexadecimal color codes (#FFFFFF).","Formato invalido. Por favor, use formato hexadecimal como (#FFFFFF)"
+"Button colors have been updated successfully.","As cores dos botoes foram atualizadas com sucesso!"
