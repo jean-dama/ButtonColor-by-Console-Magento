@@ -24,7 +24,7 @@ class ChangeButtonColor extends Command
 
     protected function configure()
     {
-        $this->setName('custombuttoncolor:change')
+        $this->setName('changebuttoncolor:change')
             ->setDescription('Change button colors')
             ->setHelp('This command allows you to change the button colors in Magento 2.')
             ->addArgument('primary_color', InputArgument::REQUIRED, 'Primary button color (e.g., #FF0000)')
