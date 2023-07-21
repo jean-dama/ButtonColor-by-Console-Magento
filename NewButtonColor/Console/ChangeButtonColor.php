@@ -41,7 +41,7 @@ class ChangeButtonColor extends Command
             return;
         }
 
-        // Update button colors in the configuration
+        // Atualiza as cores dos botoes de acordo com a configuracao
         $this->configWriter->save('design/button/primary', $primaryColor, ScopeConfigInterface::SCOPE_TYPE_DEFAULT, 0);
         $this->configWriter->save('design/button/secondary', $secondaryColor, ScopeConfigInterface::SCOPE_TYPE_DEFAULT, 0);
 
@@ -50,7 +50,7 @@ class ChangeButtonColor extends Command
 
     protected function isValidColor($color)
     {
-        // Add your validation logic here (e.g., regex to check for valid hexadecimal color code)
+        // Validacao do codigo de cor
         return preg_match('/^#[A-Fa-f0-9]{6}$/', $color);
     }
 }
