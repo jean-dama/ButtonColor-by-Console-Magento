@@ -25,10 +25,10 @@ class ChangeButtonColor extends Command
     protected function configure()
     {
         $this->setName('changebuttoncolor:change')
-            ->setDescription('Change button colors')
-            ->setHelp('This command allows you to change the button colors in Magento 2.')
-            ->addArgument('primary_color', InputArgument::REQUIRED, 'Primary button color (e.g., #FF0000)')
-            ->addArgument('secondary_color', InputArgument::REQUIRED, 'Secondary button color (e.g., #00FF00)');
+            ->setDescription(__('Change button colors'))
+            ->setHelp(__('This command allows you to change the button colors in Magento 2.'))
+            ->addArgument('primary_color', InputArgument::REQUIRED, __('Primary button color (#FFFFFF)'))
+            ->addArgument('secondary_color', InputArgument::REQUIRED, __('Secondary button color (#FFFFFF)'));
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)
@@ -37,7 +37,7 @@ class ChangeButtonColor extends Command
         $secondaryColor = $input->getArgument('secondary_color');
 
         if (!$this->isValidColor($primaryColor) || !$this->isValidColor($secondaryColor)) {
-            $output->writeln('<error>Invalid color format. Please use hexadecimal color codes (e.g., #FF0000).</error>');
+            $output->writeln(__('<error>Invalid color format. Please use hexadecimal color codes (#FFFFFF).</error>'));
             return;
         }
 
@@ -45,7 +45,7 @@ class ChangeButtonColor extends Command
         $this->configWriter->save('design/button/primary', $primaryColor, ScopeConfigInterface::SCOPE_TYPE_DEFAULT, 0);
         $this->configWriter->save('design/button/secondary', $secondaryColor, ScopeConfigInterface::SCOPE_TYPE_DEFAULT, 0);
 
-        $output->writeln('<info>Button colors have been updated successfully.</info>');
+        $output->writeln(__('<info>Button colors have been updated successfully.</info>'));
     }
 
     protected function isValidColor($color)

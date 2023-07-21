@@ -7,7 +7,6 @@ use Magento\Framework\Setup\ModuleDataSetupInterface;
 use Magento\Cms\Model\BlockFactory;
 use Magento\Cms\Api\BlockRepositoryInterface;
 
-
 class AddCmsBlocks implements DataPatchInterface
 {
     /**
@@ -90,21 +89,11 @@ class AddCmsBlocks implements DataPatchInterface
         $block->setData($bannersCategorias);
         $this->blockRepository->save($block);
         $block->setData($advantagesBanners);
+        $block = $this->blockFactory->create();
         $this->blockRepository->save($block);
-      /*$block->setData($blockExemplo2);
-        $this->blockRepository->save($block);
-        $block->setData($blockExemplo2);
-        $this->blockRepository->save($block);
-        $block->setData($blockExemplo2);
-        $this->blockRepository->save($block);
-        $block->setData($blockExemplo2);
-        $this->blockRepository->save($block);
-        $block->setData($blockExemplo2);
-        $this->blockRepository->save($block); exemplos*/
         $this->moduleDataSetup->endSetup();
         return [];
     }
-
     /**
      * {@inheritdoc}
      */
