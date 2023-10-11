@@ -1,5 +1,4 @@
-# module-mage
-**Magento modules.**
+# Magento 2 Modules
 
 Módulo **NewButtonColor** foi criado apenas com o intuito de estudo.
 
